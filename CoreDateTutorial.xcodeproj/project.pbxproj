@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3C38A9F517F652F200443068 /* FailedBankDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38A9F417F652F200443068 /* FailedBankDetails.m */; };
 		3C38A9F817F653F000443068 /* FailedBankInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C38A9F717F653F000443068 /* FailedBankInfo.m */; };
+		3C5EFD0A17F8BBF70042EC3D /* CoreDataLoader.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 3C5EFD0917F8BBF70042EC3D /* CoreDataLoader.sqlite */; };
 		3C8BED8C17F62756002BAA86 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8BED8B17F62756002BAA86 /* Foundation.framework */; };
 		3C8BED8E17F62756002BAA86 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8BED8D17F62756002BAA86 /* CoreGraphics.framework */; };
 		3C8BED9017F62756002BAA86 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8BED8F17F62756002BAA86 /* UIKit.framework */; };
@@ -43,6 +44,7 @@
 		3C38A9F417F652F200443068 /* FailedBankDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FailedBankDetails.m; path = ../FailedBankDetails.m; sourceTree = "<group>"; };
 		3C38A9F617F653F000443068 /* FailedBankInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FailedBankInfo.h; sourceTree = "<group>"; };
 		3C38A9F717F653F000443068 /* FailedBankInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FailedBankInfo.m; sourceTree = "<group>"; };
+		3C5EFD0917F8BBF70042EC3D /* CoreDataLoader.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = CoreDataLoader.sqlite; sourceTree = "<group>"; };
 		3C8BED8817F62756002BAA86 /* CoreDateTutorial.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDateTutorial.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C8BED8B17F62756002BAA86 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3C8BED8D17F62756002BAA86 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -126,6 +128,7 @@
 		3C8BED9317F62756002BAA86 /* CoreDateTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				3C5EFD0917F8BBF70042EC3D /* CoreDataLoader.sqlite */,
 				3C8BED9C17F62756002BAA86 /* CDAppDelegate.h */,
 				3C8BED9D17F62756002BAA86 /* CDAppDelegate.m */,
 				3C8BED9F17F62756002BAA86 /* Main.storyboard */,
@@ -251,6 +254,7 @@
 				3C8BEDAC17F62756002BAA86 /* Images.xcassets in Resources */,
 				3C8BED9817F62756002BAA86 /* InfoPlist.strings in Resources */,
 				3C8BEDA117F62756002BAA86 /* Main.storyboard in Resources */,
+				3C5EFD0A17F8BBF70042EC3D /* CoreDataLoader.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
