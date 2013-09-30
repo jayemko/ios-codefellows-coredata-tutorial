@@ -14,6 +14,7 @@
 
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
+
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -26,17 +27,17 @@
     // core data tutorial
     NSManagedObjectContext *context = [self managedObjectContext];
     
-    FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
-    [failedBankInfo setValue:@"Test Bank" forKey:@"name"];
-    [failedBankInfo setValue:@"Testville" forKey:@"city"];
-    [failedBankInfo setValue:@"Testland" forKey:@"state"];
-    
-    FailedBankDetails *failedBankDetails = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankDetails" inManagedObjectContext:context];
-    [failedBankDetails setValue:[NSDate date] forKey:@"closeDate"];
-    [failedBankDetails setValue:[NSDate date] forKey:@"updateDate"];
-    [failedBankDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
-    [failedBankDetails setValue:failedBankInfo forKey:@"info"];
-    [failedBankInfo setValue:failedBankDetails forKey:@"details"];
+//    FailedBankInfo *failedBankInfo = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankInfo" inManagedObjectContext:context];
+//    [failedBankInfo setValue:@"Test Bank" forKey:@"name"];
+//    [failedBankInfo setValue:@"Testville" forKey:@"city"];
+//    [failedBankInfo setValue:@"Testland" forKey:@"state"];
+//    
+//    FailedBankDetails *failedBankDetails = [NSEntityDescription insertNewObjectForEntityForName:@"FailedBankDetails" inManagedObjectContext:context];
+//    [failedBankDetails setValue:[NSDate date] forKey:@"closeDate"];
+//    [failedBankDetails setValue:[NSDate date] forKey:@"updateDate"];
+//    [failedBankDetails setValue:[NSNumber numberWithInt:12345] forKey:@"zip"];
+//    [failedBankDetails setValue:failedBankInfo forKey:@"info"];
+//    [failedBankInfo setValue:failedBankDetails forKey:@"details"];
     
     NSError *error;
     if ([context save:&error]){
@@ -46,7 +47,9 @@
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     NSEntityDescription *entity = [NSEntityDescription entityForName:@"FailedBankInfo" inManagedObjectContext:context];
     [fetchRequest setEntity:entity];
+    
     NSArray *fetchedObjects = [context executeFetchRequest:fetchRequest error:&error];
+    
     for (NSManagedObject *info in fetchedObjects) {
         NSLog(@"Name: %@", [info valueForKey:@"name"]);
         NSManagedObject *details = [info valueForKey:@"details"];
